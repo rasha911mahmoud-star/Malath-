@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الاسئلة الشائعة</title>
+     <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="header-main fixed-top  ">
+            <nav class="navbar navbar-expand-lg py-3 container d-flex justify-content-between align-items-center">
+
+                <!-- LOGO -->
+                <a class="navbar-brand d-flex align-items-center gap-2 logo-container" href="index.html" dir="rtl">
+                    <img src="assets/images/main.png" alt="MALATH" class="logo-img" style="height:80px; transition: all 0.3s;">
+                    <div class="logo-text" style="transition: all 0.3s;">
+                        <span class="logo-ar fs-4">ملاذ</span>
+                        <span class="logo-en fs-6">MALATH</span>
+                    </div>
+                </a>
+
+                <!-- TOGGLER كأيقونة i -->
+                <button class="btn btn-outline-primary d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                    <i class="bi bi-info-circle"></i> 
+                </button>
+
+                <!-- MENU للشاشات الكبيرة -->
+                <div class="collapse navbar-collapse d-none d-lg-flex" id="mainMenu" dir="rtl">
+                    
+                    <!-- 1. القائمة بالوسط -->
+                    <ul class="navbar-nav align-items-lg-center gap-lg-4 mx-auto">                    
+                        <li class="nav-item">
+                            <a class="nav-link " href="index.html">الصفحة الرئيسية</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> منشورات </a>
+                            <ul class="dropdown-menu ">
+                                <li><a class="dropdown-item" href="articles.html">مقالات</a></li>
+                                <li><a class="dropdown-item" href="video.html">فيديوهات</a></li>
+                            </ul>
+                        </li>                   
+                        <li class="nav-item">
+                            <a class="nav-link active" href="FAQ.html">الاسئلة الشائعة</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="contact.html">طلب جلسة</a>
+                        </li>
+                    </ul>
+
+                  <!-- date -->
+                    <div id="dynamic-date" class="navbar-text fw-bold text-primary small ms-3">
+                       
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+        <!-- Offcanvas Menu للشاشات الصغيرة -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel" dir="rtl">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasMenuLabel">القائمة</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav">
+                    <li class="nav-item mb-2">
+                        <a class="btn btn-send w-100" href="contact.html">طلب جلسة</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link " href="index.html">الصفحة الرئيسية</a>
+                    </li>
+                    <li class="nav-item dropdown mb-2">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> منشورات </a>
+                        <ul class="dropdown-menu text-start">
+                            <li><a class="dropdown-item" href="articles.html">مقالات</a></li>
+                            <li><a class="dropdown-item" href="video.html">فيديوهات</a></li>
+                        </ul>
+                    </li>           
+                    <li class="nav-item mb-2">
+                        <a class="nav-link active" href="FAQ.html">الاسئلة الشائعة </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+<section class="faq-section py-5 faq">
+    <div class="container">
+        <!-- تطوير العنوان -->
+        <div class="text-center mb-5">
+            <h2 class="section-title fw-bold">تعرّف على منصتنا</h2>
+            <p class="text-muted mt-2">إليك كل ما تود معرفته عن رسالتنا وكيف نقف بجانبك في رحلة التعافي</p>
+            <div class="title-line"></div>
+        </div>
+
+        <div class="faq-container mx-auto" style="max-width: 900px;">
+            
+            <!-- السؤال 1: هدف الموقع -->
+            <div class="faq-item active">
+                <div class="faq-question">
+                    ما هو هدف هذا الموقع؟
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer" style="display:block;">
+                    هدفنا هو تقديم الدعم النفسي والتوعوي للأشخاص الذين مروا بظروف الحروب والأزمات، من خلال توفير موارد تعليمية وجلسات استماع تساعدهم على فهم وتجاوز الصدمات النفسية.
+                </div>
+            </div>
+
+            <!-- السؤال 2: لمن هذا الموقع -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    لمن تتوجه خدمات هذا الموقع؟
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    نتوجه لكل من تأثر بالحروب بشكل مباشر أو غير مباشر، سواء كانوا بالغين يبحثون عن فهم لحالتهم، أو أهالي يحتاجون لإرشادات للتعامل مع أطفالهم، أو حتى المهتمين بمجال الدعم النفسي الأولي.
+                </div>
+            </div>
+
+            <!-- السؤال 3: نوع المحتوى -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    ماذا أجد في قسم المقالات والفيديوهات؟
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    نقدم محتوى متخصصاً يشرح أعراض ما بعد الصدمة، كيفية التعامل مع القلق المستمر، تمارين التنفس والتفريغ الانفعالي، وقصص ملهمة عن التعافي، وكلها معدة بأسلوب بسيط وعلمي.
+                </div>
+            </div>
+
+            <!-- السؤال 5: كيفية طلب الجلسة -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    كيف يمكنني الاستفادة من "جلسة دعم"؟
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    يمكنك ملء النموذج في صفحة "طلب جلسة"، وسيقوم فريقنا بمراجعة طلبك والتواصل معك عبر الواتساب لتنسيق موعد مناسب لجلسة استماع ودعم نفسي أولي.
+                </div>
+            </div>
+
+            <!-- السؤال 6: الخصوصية -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    هل خصوصيتي محمية عند استخدام الموقع؟
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    بكل تأكيد. نحن نؤمن بأن الأمان هو أساس التعافي. لا نطلب بيانات حساسة، وحتى عند طلب جلسة يمكنك استخدام اسم مستعار. جميع تواصلاتك ومعلوماتك تُعامل بسرية تامة.
+                </div>
+            </div>
+
+            <!-- السؤال 7: التكلفة -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    هل الاستفادة من محتوى الموقع تتطلب دفع رسوم؟
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    المحتوى التوعوي من مقالات وفيديوهات متاح للجميع مجاناً. أما بخصوص جلسات الدعم، فنحن نسعى لتوفيرها بشكل تطوعي أو ميسر حسب الإمكانيات المتاحة لدعم أكبر عدد ممكن من المتضررين.
+                </div>
+            </div>
+
+            <!-- السؤال 8: حالات الطوارئ -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    ماذا أفعل إذا كنت في حالة نفسية طارئة الآن؟
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    إذا كنت تعاني من أفكار حادة أو تمر بأزمة لا تحتمل التأخير، يرجى عدم انتظار الرد على النموذج والتوجه فوراً لأقرب مركز طوارئ أو التواصل مع الخطوط الساخنة للدعم النفسي في بلدك.
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<hr>
+
+<!--  قسم ارشادات  -->
+<section class="guidance-table-section py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">إرشادات لرحلة تعافيك</h2>
+            <p class="text-muted">نحن هنا لنسمعك، إليك بعض النقاط التي تهمك قبل طلب جلسة الدعم</p>
+        </div>
+
+        <div class="table-responsive custom-table-wrapper">
+            <table class="table table-hover align-middle text-center">
+                <thead class="table-light">
+                    <tr>
+                        <th scope="col" class="text-end">موضوع الدعم</th>
+                        <th scope="col">رسالة طمأنة</th>
+                        <th scope="col">الخصوصية</th>
+                        <th scope="col">نصيحة سريعة</th>
+                        <th scope="col">الحالة</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row" class="text-end">
+                            <i class="fas fa-heart me-2 text-danger"></i> مشاعر ما بعد الصدمة
+                        </th>
+                        <td>رد فعلك طبيعي تجاه أحداث غير طبيعية</td>
+                        <td><span class="badge bg-success-light text-success">سرية مطلقة</span></td>
+                        <td>لا تلم نفسك على مشاعرك</td>
+                        <td class="text-primary fw-bold">نحن معك</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-end">
+                            <i class="fas fa-shield-alt me-2 text-primary"></i> الأمان والخصوصية
+                        </th>
+                        <td>بياناتك واسمك في أيدٍ أمينة</td>
+                        <td><span class="badge bg-success-light text-success">مشفر تماماً</span></td>
+                        <td>يمكنك استخدام اسم مستعار</td>
+                        <td class="text-primary fw-bold">مساحة آمنة</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-end">
+                            <i class="fas fa-wind me-2 text-info"></i> نوبات القلق والتوتر
+                        </th>
+                        <td>تعلم تقنيات التنفس والتفريغ الانفعالي</td>
+                        <td><span class="badge bg-success-light text-success">سرية مطلقة</span></td>
+                        <td>جرب تمرين التنفس (4-7-8)</td>
+                        <td class="text-primary fw-bold">دعم مستمر</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-end">
+                            <i class="fas fa-comments me-2 text-success"></i> جلسات الاستماع
+                        </th>
+                        <td>تفريغ الكلام يساعد في تخفيف الثقل النفسي</td>
+                        <td><span class="badge bg-success-light text-success">سرية مطلقة</span></td>
+                        <td>تحدث بما يجول في خاطرك فقط</td>
+                        <td class="text-primary fw-bold">أذان صاغية</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="text-center mt-4">
+            <p class="small text-muted italic">* ملاحظة: جميع هذه الخدمات تهدف للتوعية والدعم النفسي الأولي لتجاوز آثار الحروب.</p>
+        </div>
+    </div>
+</section>
+            
+<footer class="footer-section pt-5 pb-3">
+    <div class="container">
+        <div class="row gy-4">
+            
+            <!-- العمود الأول: اللوجو والوصف -->
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-logo mb-3">
+                    <img src="assets/images/main.png" alt="MALATH" style="height: 60px;">
+                    <span class="footer-logo-text ms-2">ملاذ | MALATH</span>
+                </div>
+                <p class="footer-bio text-muted">
+                    وجهتك الآمنة للحصول على استشارات نفسية وأسرية احترافية. نؤمن بأن الصحة النفسية هي أساس الحياة السعيدة، ونحن هنا لنرافقك في رحلتك نحو التوازن.
+                </p>
+                <div class="footer-socials d-flex gap-3 mt-4">
+  <a href="#" class="social-icon">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>
+  <a href="#" class="social-icon">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+  <a href="#" class="social-icon">
+    <i class="fa-brands fa-twitter"></i>
+  </a>
+  <a href="#" class="social-icon">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+</div>
+
+            </div>
+
+            <!-- العمود الثاني: روابط سريعة -->
+            <div class="col-lg-2 col-md-6 offset-lg-1 pt-2">
+                <h5 class="footer-title">روابط سريعة</h5>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="index.html">الصفحة الرئيسية</a></li>
+                    <li><a href="articles.html">منشورات</a></li>
+                    <li><a href="FAQ.html">الأسئلة الشائعة</a></li>
+                </ul>
+            </div>
+
+            <!-- العمود الثالث: منشوراتنا -->
+            <div class="col-lg-2 col-md-6 pt-2">
+                <h5 class="footer-title">منشوراتنا</h5>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="articles.html">أحدث المقالات</a></li>
+                    <li><a href="video.html">فيديوهات توعوية</a></li>
+                    <li><a href="index.html#story">قصص التعافي</a></li>
+                </ul>
+            </div>
+
+            <!-- العمود الرابع: التواصل -->
+            <div class="col-lg-3 col-md-6 pt-2">
+                <h5 class="footer-title">ابقى على تواصل</h5>
+                <p class="text-muted mb-2"><i class="bi bi-geo-alt-fill me-2 main-clr"></i> فلسطين - غزة</p>
+                <p class="text-muted mb-2"><i class="bi bi-envelope-fill me-2 main-clr"></i> info@malath.com</p>
+                <div class="mt-3">
+                   <a href="contact.html" class="btn btn-outline-main btn-sm rounded-pill px-4">اطلب الدعم الآن</a>
+                </div>
+            </div>
+
+        </div>
+
+        <hr class="mb-4 footer-hr">
+
+        <!-- سطر حقوق النشر -->
+            <div class=" text-center ">
+                <p class="copyright-text mb-0">&copy; 2026 جميع الحقوق محفوظة لـ <strong>ملاذ</strong></p>
+            </div>
+    </div>
+</footer>
+    
+
+<!-- jQuery -->
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<!-- <script src="js/jquery-3.7.1.min.js"></script> -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
